@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
 def post_list(request):
-    return render(request, 'blog1/index.html', {})
+    if request.method == 'GET':
+        return render(request, 'blog1/index.html')
